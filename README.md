@@ -7,7 +7,7 @@
 版本信息
 -------
 >版本: V1.0<br/>
->开发工具：Android Studio V0.4.2<br/>
+>开发工具：IntelliJ  IDEA 12.0.4>
 >作者: Terwer<br/>
 >作者邮箱: cbgtyw@gmail.com<br/>
 >作者博客: http://www.xinvalue.com<br/>
