@@ -21,7 +21,7 @@
 
 技术架构
 -------
->1、本程序基于Android，编译版本为Android4.0（api14），最低运行版本为Android2.2；   <br/>
+>1、本程序基于Android，编译版本为Android42.2（api10），最低运行版本为Android2.2；   <br/>
 
 =======
 
