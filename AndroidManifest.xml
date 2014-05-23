@@ -30,6 +30,7 @@
         <activity android:name=".CaptureActivity"
                   android:screenOrientation="portrait"
                 />
+        <activity android:name=".GenerateCodeResultActivity"/>
         <!--  android:screenOrientation="landscape"-->
     </application>
 </manifest> 
