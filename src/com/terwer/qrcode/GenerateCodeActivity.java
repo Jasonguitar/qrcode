@@ -1,6 +1,7 @@
 package com.terwer.qrcode;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -36,11 +37,11 @@ public class GenerateCodeActivity extends Activity {
                 if (ed_text.getText().toString().equals("")) {
                     Util.showToast(GenerateCodeActivity.this, "文字内容不能为空");
                     return;
-                }
-                try {
-                    QrcodeHelper.createQRImage(ed_text.getText().toString());
-                } catch (WriterException e) {
-                    e.printStackTrace();
+                } else {
+                    Intent intent = new Intent();
+                    intent.setClass(GenerateCodeActivity.this, GenerateCodeResultActivity.class);
+                    intent.putExtra("CodeText", ed_text.getText().toString());
+                    startActivity(intent);
                 }
             }
         });
