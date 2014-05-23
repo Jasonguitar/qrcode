@@ -42,9 +42,9 @@ public class ContentFrameAdapter extends FragmentPagerAdapter {
         switch (pos) {
             case 0:
                 return ContentFrameLeft.newInstance(mContentList.get(pos));
+            //case 1:
+            //    return ContentFrameCenter.newInstance(mContentList.get(pos));
             case 1:
-                return ContentFrameCenter.newInstance(mContentList.get(pos));
-            case 2:
                 return ContentFrameRight.newInstance(mContentList.get(pos));
             default:
                 return null;

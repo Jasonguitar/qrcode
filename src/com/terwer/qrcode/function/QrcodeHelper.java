@@ -2,7 +2,7 @@ package com.terwer.qrcode.function;
 
 
 import android.app.Activity;
-import android.graphics.Bitmap;
+import android.graphics.*;
 import android.widget.ImageView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -10,15 +10,17 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
+import java.io.IOException;
 import java.util.Hashtable;
 
 /**
  * Created by Tangyouwei on 2014/5/18.
  */
 public class QrcodeHelper {
-    private static final int QR_WIDTH = 100;//二维码图片宽度
-    private static final int QR_HEIGHT = 100;//二维码图片高度
-
+    private static final int QR_WIDTH = 600;//二维码图片宽度
+    private static final int QR_HEIGHT = 600;//二维码图片高度
+    /** 头像图片大小 */
+    private static final int PORTRAIT_SIZE = 55;
     /**
      * 输入文字生成二维码并显示到ImageView
      *
@@ -96,4 +98,48 @@ public class QrcodeHelper {
         }
     }
 
+    /**
+     * 初始化头像图片
+     */
+    public static Bitmap initProtrait(Activity activity,String url) {
+        try {
+            // 这里采用从asset中加载图片abc.jpg
+            Bitmap portrait = BitmapFactory.decodeStream(activity.getAssets().open(url));
+
+            // 对原有图片压缩显示大小
+            Matrix mMatrix = new Matrix();
+            float width = portrait.getWidth();
+            float height = portrait.getHeight();
+            mMatrix.setScale(PORTRAIT_SIZE / width, PORTRAIT_SIZE / height);
+            return Bitmap.createBitmap(portrait, 0, 0, (int) width,
+                    (int) height, mMatrix, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 在二维码上绘制头像
+     */
+    public static void createQRCodeBitmapWithPortrait(Bitmap qr, Bitmap portrait) {
+        // 头像图片的大小
+        int portrait_W = portrait.getWidth();
+        int portrait_H = portrait.getHeight();
+
+        // 设置头像要显示的位置，即居中显示
+        int left = (QR_WIDTH - portrait_W) / 2;
+        int top = (QR_WIDTH - portrait_H) / 2;
+        int right = left + portrait_W;
+        int bottom = top + portrait_H;
+        Rect rect1 = new Rect(left, top, right, bottom);
+
+        // 取得qr二维码图片上的画笔，即要在二维码图片上绘制我们的头像
+        Canvas canvas = new Canvas(qr);
+
+        // 设置我们要绘制的范围大小，也就是头像的大小范围
+        Rect rect2 = new Rect(0, 0, portrait_W, portrait_H);
+        // 开始绘制
+        canvas.drawBitmap(portrait, rect2, rect1, null);
+    }
 }

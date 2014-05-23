@@ -2,7 +2,7 @@
 <resources>
     <string-array name="sections">
         <item>\u0020\u0020\u0020\u0020\u0020\u0020\u0020工具箱</item>
-        <item>\u0020\u0020\u0020\u0020\u0020\u0020个人中心</item>
+      <!--  <item>\u0020\u0020\u0020\u0020\u0020\u0020个人中心</item>-->
         <item>\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020应用</item>
     </string-array>
 </resources>
