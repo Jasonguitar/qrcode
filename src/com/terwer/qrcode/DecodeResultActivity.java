@@ -38,26 +38,21 @@ public class DecodeResultActivity extends Activity {
         Bundle bundle = getIntent().getExtras();
         if (null != bundle) {
             decode_result = bundle.getString("Contents");
-         }
+        }
 
         Gson gson = new Gson();
-        Result result=gson.fromJson(decode_result,Result.class);
-        Util.showAlert(DecodeResultActivity.this,result.getText());
+        Result result = gson.fromJson(decode_result, Result.class);
+        //Util.showAlert(DecodeResultActivity.this,result.getText());
         ////////////////////////////////////////////////////////////
 
-
-
-
-
-        return;
-
-       // txt_decode_result.setText("扫描到的信息如下：\r\n" + decode_result.replace("Format", "编码格式").replace("QR_CODE", "二维码").replace("Contents", "内容").replace("Raw bytes:", "大小:").replace("bytes)", "字节)").replace("Orientation: null", "").replace("EC level: H", "").replace("EC level: null", "").replace("EC level: L",""));
-       // txt_decode_result.setTextColor(Color.rgb(new Random().nextInt(255), new Random().nextInt(255), new Random().nextInt(255)));
+        txt_decode_result.setText("扫描到的信息如下：\r\n" +
+                "编码格式:" + result.getResultMetadata() +
+                "\r\n内容" + result.getText() + "\r\n");
 
 
         //final String contents = getContents(decode_result);
 
-       // final String contents = decode_result;
+        // final String contents = decode_result;
         //Util.showAlert(DecodeResultActivity.this,contents);
 //        if (contents.contains("weixin.qq.com")) {
 //            Util.showConfirm(DecodeResultActivity.this, "温馨提示", new DialogInterface.OnClickListener() {
