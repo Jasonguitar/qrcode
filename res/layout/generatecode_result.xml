@@ -1,9 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:background="#dddddd"
               android:orientation="vertical">
-
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="40dp"
@@ -27,19 +27,34 @@
                 android:src="@drawable/titlebar_logo"/>
     </RelativeLayout>
 
+    <ImageView
+            android:id="@+id/img_qrcode"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/dx_app_mgr_main_app2sd"
+            />
 
-    <LinearLayout android:layout_width="fill_parent"
-                  android:layout_height="fill_parent"
-                  android:orientation="vertical"
-            >
-        <TextView
-                android:id="@+id/txt_decode_result"
-                android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                  android:text="结果"
-                />
+    <Button
+            android:id="@+id/btn_share_qrimg"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/img_sharebtn"
+            android:text="分享我的二维码"
+            />
 
-    </LinearLayout>
-
-
+    <Button
+            android:id="@+id/btn_go_tocap"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/img_dotocapbtn"
+            android:text="扫描二维码"
+            />
 </LinearLayout>

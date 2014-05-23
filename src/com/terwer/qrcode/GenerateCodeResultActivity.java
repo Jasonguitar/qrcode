@@ -3,9 +3,9 @@ package com.terwer.qrcode;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.ImageView;
 import com.google.zxing.WriterException;
-import com.google.zxing.qrcode.encoder.QRCode;
 import com.terwer.qrcode.function.QrcodeHelper;
 
 /**
@@ -21,7 +21,8 @@ public class GenerateCodeResultActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gencode_result);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.generatecode_result);
 
         img_qrcode = (ImageView) findViewById(R.id.img_qrcode);
 
