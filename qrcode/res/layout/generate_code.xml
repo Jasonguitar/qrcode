@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#dddddd"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#074060">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="微码"
+                android:textColor="#eeeeee"
+                android:textSize="20dp"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/title"
+                android:src="@drawable/titlebar_logo"/>
+    </RelativeLayout>
+
+
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#E0FFFF"
+        >
+
+    <EditText
+            android:id="@+id/ed_text"
+            android:layout_width="fill_parent"
+              android:layout_height="200dp"/>
+
+
+    <Button
+            android:id="@+id/btn_gen_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textSize="48dp"
+            android:text="生成二维码"
+            />
+
+        </LinearLayout>
+
+</LinearLayout>

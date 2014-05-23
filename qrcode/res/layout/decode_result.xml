@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#dddddd"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#074060">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="微码"
+                android:textColor="#eeeeee"
+                android:textSize="20dp"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/title"
+                android:src="@drawable/titlebar_logo"/>
+    </RelativeLayout>
+
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:orientation="vertical"
+            android:background="#E0FFFF"
+            >
+        <TextView
+                android:id="@+id/txt_decode_result"
+                android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="结果"
+                />
+
+    </LinearLayout>
+
+
+</LinearLayout>

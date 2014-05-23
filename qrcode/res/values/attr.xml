@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sections">
+        <item>\u0020\u0020\u0020\u0020\u0020\u0020\u0020工具箱</item>
+        <item>\u0020\u0020\u0020\u0020\u0020\u0020个人中心</item>
+        <item>\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020应用</item>
+    </string-array>
+</resources>

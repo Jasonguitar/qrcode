@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#dddddd"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#074060">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="微码"
+                android:textColor="#eeeeee"
+                android:textSize="20dp"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/title"
+                android:src="@drawable/titlebar_logo"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0FFFF"
+            android:orientation="vertical">
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="扫描到的商品信息如下："
+                />
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#E0FFFF"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/img_book_cover"
+                    android:layout_width="160dp"
+                       android:layout_height="220dp"
+                       android:src="@drawable/book_cover"
+
+                    />
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                    >
+                <TextView
+                        android:id="@+id/txt_book_title"
+                        android:layout_width="wrap_content"
+                          android:layout_height="35dp"
+                          android:textSize="16dp"
+                          android:text="书名：安卓二维码图像应用系统"
+                        />
+
+                <TextView
+                        android:id="@+id/txt_author_name"
+                        android:layout_width="wrap_content"
+                          android:layout_height="35dp"
+                          android:textSize="16dp"
+                          android:text="作者：唐有炜"
+                        />
+
+                <TextView
+                        android:id="@+id/txt_publisher"
+                        android:layout_width="wrap_content"
+                          android:layout_height="35dp"
+                          android:textSize="16dp"
+                          android:text="出版社：长江大学"
+                        />
+                <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:textSize="16dp"
+                        android:text="价格：100元"
+                        />
+                <TextView
+                        android:id="@+id/txt_pages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:textSize="16dp"
+                        android:text="页数：1000页"
+                        />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/txt_book_content"
+                android:layout_width="fill_parent"
+                  android:layout_height="335dp"
+                  android:textSize="16dp"
+
+                  android:text="书籍简介：简介。"
+                />
+    </LinearLayout>
+
+</LinearLayout>
