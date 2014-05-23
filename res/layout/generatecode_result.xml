@@ -31,18 +31,33 @@
             android:id="@+id/img_qrcode"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/dx_app_mgr_main_app2sd"
+            />
+
+    <Button
+            android:id="@+id/btn_save_qrimg"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="24dp"
+            android:textColor="#FFFF"
+            android:background="@drawable/img_dotocapbtn"
+            android:text="立即保存"
             />
 
     <Button
             android:id="@+id/btn_share_qrimg"
             android:layout_marginTop="20dp"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="center"
             android:layout_gravity="center"
+            android:textSize="24dp"
+            android:textColor="#FFFF"
             android:background="@drawable/img_sharebtn"
             android:text="分享我的二维码"
             />
@@ -51,9 +66,11 @@
             android:id="@+id/btn_go_tocap"
             android:layout_marginTop="20dp"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="center"
             android:layout_gravity="center"
+            android:textSize="24dp"
+            android:textColor="#FFFF"
             android:background="@drawable/img_dotocapbtn"
             android:text="扫描二维码"
             />

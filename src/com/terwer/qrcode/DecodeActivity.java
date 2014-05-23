@@ -132,7 +132,7 @@ public class DecodeActivity extends FragmentActivity {
                 intent2.putExtra("Contents", contents);
                 startActivity(intent2);
             } else {
-                Util.showAlert(DecodeActivity.this, "来路非法");
+                //Util.showAlert(DecodeActivity.this, "来路非法");
             }
 
 

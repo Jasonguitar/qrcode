@@ -30,10 +30,10 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
 
 
 public class Util {
@@ -184,5 +184,32 @@ public class Util {
         return false;
     }
 
-
+    /**
+     * 将Birmap保存为图片
+     * @param bitmap
+     * @throws IOException
+     */
+    public  static  String saveBitmap(Bitmap bitmap) throws IOException
+    {
+        String filepath="/sdcard/terwer/"+new Date().getTime()+".png";
+        File file = new File(filepath);
+        FileOutputStream out;
+        try{
+            out = new FileOutputStream(file);
+            if(bitmap.compress(Bitmap.CompressFormat.PNG, 70, out))
+            {
+                out.flush();
+                out.close();
+            }
+            return filepath;
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();return "";
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();return "";
+        }
+    }
 }
